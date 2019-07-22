@@ -1,0 +1,12 @@
+<div class="login-box">
+    <img src="../assets/img/eureka.png" class="avatar" alt="Avatar Image">
+    <h1>Registro de Proyectos Finalistas</h1>
+    <form name="formulario">
+        <!-- USERNAME INPUT -->
+        <label for="username">Código de Acceso</label>
+        <input type="text" placeholder="Ingrese código de acceso" name="codigo" [(ngModel)]="codigo">
+        <!-- PASSWORD INPUT -->
+        <input type="button" value="Registrar" (click)="onLogin()">
+        <input type="button" value="Cancelar" (click)="onClose()">
+    </form>
+</div>
