@@ -1,22 +1,29 @@
-<div class="text-center bg-info">
-    <h3>Documentos Adjuntos</h3>
+<div class="text-center">
+    <h3>Documentos Adjuntos - {{ codigo }}</h3>
 </div>
+
 <div class="container-fluid mt-4">
-
     <div class="card-columns">
-        <div class="card">
-            <div class="card-block">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <div class="card" *ngFor="let formato of formatos">
+            <div class="card-body">
+                <h3 class="card-text text-center text-green">{{ formato.idDocumento }}</h3>
+                <h5 class="card-title text-center text-blue">{{ formato.nombreDocumento }}</h5>
+                <hr>
+                <div class="text-center" *ngIf="formato.codigo">
+                    <img src="assets/img/pdf.png" width="30" height="30" alt="">
+                    <h6>{{ formato.nombreArchivo }}</h6>
+                </div>
+            </div>
 
-                <button type="button" class="btn btn-outline-primary btn-block">Adjuntar Documento</button>
-                <button type="button" class="btn btn-outline-danger btn-block">Borrar Documento</button>
+            <div class="card-footer">
+                <div *ngIf="!formato.codigo">
+                    <button type="button" class="btn btn-outline-primary btn-block" [routerLink]="['/formato', formato.nombreDocumento, formato.idDocumento]">Adjuntar Documento</button>
+                </div>
+                <div *ngIf="formato.codigo">
+                    <button type="button " class="btn btn-outline-danger btn-block" (click)="formatosborrar(formato.codigo, formato.idDocumento, formato.ruta)">Borrar Documento</button>
+                </div>
 
             </div>
         </div>
     </div>
-
-
-
 </div>

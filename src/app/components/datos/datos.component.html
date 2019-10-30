@@ -1,379 +1,410 @@
-<div class="text-center bg-info">
-    <h3>Formulario de Inscripción</h3>
+<div class="text-center">
+    <h3>Formulario de Inscripción - {{ codigo }}</h3>
 </div>
 <div class="container-fluid mt-4">
     <div class="row no-gutters text-center">
-        <div class="col-sm-3 border bg-light">
+        <div class="col-sm-3 border bg-secondary">
             <h5>I. Institución Educativa</h5>
         </div>
-        <div class="col-sm-3 border bg-light">
+        <div class="col-sm-3 border bg-secondary">
             <h5>II. Investigación</h5>
         </div>
-        <div class="col-sm-3 border bg-light">
+        <div class="col-sm-3 border bg-secondary">
             <h5>III. Estudiantes</h5>
         </div>
-        <div class="col-sm-3 border bg-light">
+        <div class="col-sm-3 border bg-secondary">
             <h5>IV. Docente Asesor</h5>
         </div>
     </div>
-    <div class="row no-gutters">
-        <div class="col-sm-3 border bg-light">
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Nombre</span>
+    <form (ngSubmit)="guardar(forma)" #forma="ngForm">
+        <div class="row ">
+            <div class="col-sm-3 border bg-light">
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Nombre</span>
+                    </div>
+                    <input type="text" class="form-control" name="nombreie" [(ngModel)]="formulario.nombreInstitucionEducativa">
                 </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Dirección</span>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Dirección</span>
+                    </div>
+                    <input type="text" class="form-control" class="form-control" name="direccionie" [(ngModel)]="formulario.direccionInstitucionEducativa">
                 </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Lugar</span>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Lugar</span>
+                    </div>
+                    <input type="text" class="form-control" class="form-control" name="lugarie" [(ngModel)]="formulario.lugarInstitucionEducativa">
                 </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Distrito</span>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Distrito</span>
+                    </div>
+                    <input type="text" class="form-control" class="form-control" name="distritoie" [(ngModel)]="formulario.distritoInstitucionEducativa">
                 </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Provincia</span>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Provincia</span>
+                    </div>
+                    <input type="text" class="form-control" class="form-control" name="provinciaie" [(ngModel)]="formulario.provinciaInstitucionEducativa">
                 </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Región</span>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Región</span>
+                    </div>
+                    <input type="text" class="form-control" class="form-control" name="regionie" [(ngModel)]="formulario.regionInstitucionEducativa">
                 </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono</span>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono</span>
+                    </div>
+                    <input type="text" class="form-control" class="form-control" name="telefonoie" [(ngModel)]="formulario.telefonoInstitucionEducativa">
                 </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Fax</span>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Fax</span>
+                    </div>
+                    <input type="text" class="form-control" class="form-control" name="faxie" [(ngModel)]="formulario.faxInstitucionEducativa">
                 </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Email</span>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Email</span>
+                    </div>
+                    <input type="text" class="form-control" class="form-control" name="emailie" [(ngModel)]="formulario.emailInstitucionEducativa" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
                 </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Director</span>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Director</span>
+                    </div>
+                    <input type="text" class="form-control" class="form-control" name="directorie" [(ngModel)]="formulario.nombreDirector">
                 </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Tipo</label>
-                </div>
-                <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Institución ...</option>
-                    <option value="1">Privado</option>
-                    <option value="2">Público</option>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Tipo</label>
+                    </div>
+                    <select name="pubpri" [(ngModel)]="formulario.publicaPrivada" class="custom-select" id="inputGroupSelect01">
+                    <!-- <option selected>Institución ...</option> -->
+                    <option value="Privada">Privada</option>
+                    <option value="Publica">Pública</option>
                 </select>
+                </div>
+            </div>
+            <!-- Datos Investigacion -->
+            <div class="col-sm-3 border bg-light">
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Título</span>
+                    </div>
+                    <input type="text" class="form-control" name="titulo" [(ngModel)]="formulario.tituloTrabajo">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Categoría C</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01" name="categoriac" [(ngModel)]="formulario.categoriaC">
+                    <!-- <option selected>Area de participación</option> -->
+                    <option value="Ciencias Ambientales">Ciencias Ambientales</option>
+                    <option value="Ciencias Basicas">Ciencias Básicas</option>
+                    <option value="Tecnologia e Ingenieria">Tecnología e Ingeniería</option>
+                </select>
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Categoría D</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01" name="categoriad" [(ngModel)]="formulario.categoriaD">
+                    <!-- <option selected>Area de participación</option> -->
+                    <option value="Ciencias Sociales y Ciudadania">Ciencias Sociales y Ciudadanía</option>
+                </select>
+                </div>
+            </div>
+            <!-- Datos Estudiante 1 -->
+            <div class="col-sm-3 border bg-light">
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Nombre</span>
+                    </div>
+                    <input type="text" class="form-control" name="nombree1" [(ngModel)]="formulario.nombreEstudiante1" placeholder="Estudiante 1">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Dirección</span>
+                    </div>
+                    <input type="text" class="form-control" name="direccione1" [(ngModel)]="formulario.direccionEstudiante1">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Lugar</span>
+                    </div>
+                    <input type="text" class="form-control" name="lugare1" [(ngModel)]="formulario.lugarEstudiante1">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Distrito</span>
+                    </div>
+                    <input type="text" class="form-control" name="distritoe1" [(ngModel)]="formulario.distritoEstudiante1">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Provincia</span>
+                    </div>
+                    <input type="text" class="form-control" name="provinciae1" [(ngModel)]="formulario.provinciaEstudiante1">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Región</span>
+                    </div>
+                    <input type="text" class="form-control" name="regione1" [(ngModel)]="formulario.regionEstudiante1">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono</span>
+                    </div>
+                    <input type="text" class="form-control" name="telefonoe1" [(ngModel)]="formulario.telefonoEstudiante1">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Email</span>
+                    </div>
+                    <input type="text" class="form-control" name="emaile1" [(ngModel)]="formulario.emailEstudiante1" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">F.Nacimiento</span>
+                    </div>
+                    <input type="text" class="form-control" name="fnacimientoe1" [(ngModel)]="formulario.fechaNacimientoEstudiante1" placeholder="dd/mm/yyyy">
+                </div>
+
+                <!-- <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">F.Nacimiento</span>
+                    </div>
+                    <input id="input-fecha" type="date" min="2000-01-01" max="2018-12-31" name="fnacimientoe11" [(ngModel)]="formulario.fechaNacimientoEstudiante1">
+                </div> -->
+
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">DNI</span>
+                    </div>
+                    <input type="text" class="form-control" name="dnie1" [(ngModel)]="formulario.dniEstudiante1">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Grado</span>
+                    </div>
+                    <input type="text" class="form-control" name="gradoe1" [(ngModel)]="formulario.gradoEstudiosEstudiante1">
+                </div>
+                <hr>
+                <!-- Datos Estudiante 2 -->
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Nombre</span>
+                    </div>
+                    <input type="text" class="form-control" name="nombree2" [(ngModel)]="formulario.nombreEstudiante2" placeholder="Estudiante 2">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Dirección</span>
+                    </div>
+                    <input type="text" class="form-control" name="direccione2" [(ngModel)]="formulario.direccionEstudiante2">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Lugar</span>
+                    </div>
+                    <input type="text" class="form-control" name="lugare2" [(ngModel)]="formulario.lugarEstudiante2">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Distrito</span>
+                    </div>
+                    <input type="text" class="form-control" name="ditritoe2" [(ngModel)]="formulario.distritoEstudiante2">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Provincia</span>
+                    </div>
+                    <input type="text" class="form-control" name="provinciae2" [(ngModel)]="formulario.provinciaEstudiante2">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Región</span>
+                    </div>
+                    <input type="text" class="form-control" name="regione2" [(ngModel)]="formulario.regionEstudiante2">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono</span>
+                    </div>
+                    <input type="text" class="form-control" name="telefonoe2" [(ngModel)]="formulario.telefonoEstudiante2">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Email</span>
+                    </div>
+                    <input type="text" class="form-control" name="emaile2" [(ngModel)]="formulario.emailEstudiante2" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">F.Nacimiento</span>
+                    </div>
+                    <input type="text" class="form-control" name="fnacimientoe2" [(ngModel)]="formulario.fechaNacimientoEstudiante2" placeholder="dd/mm/yyyy">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">DNI</span>
+                    </div>
+                    <input type="text" class="form-control" name="dnie2" [(ngModel)]="formulario.dniEstudiante2">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Grado</span>
+                    </div>
+                    <input type="text" class="form-control" name="gradoe2" [(ngModel)]="formulario.gradoEstudiosEstudiante2">
+                </div>
+            </div>
+            <!-- Datos Docente Asesor -->
+            <div class="col-sm-3 border bg-light">
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Nombre</span>
+                    </div>
+                    <input type="text" class="form-control" name="nombredoc" [(ngModel)]="formulario.nombreDocente">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Dirección</span>
+                    </div>
+                    <input type="text" class="form-control" name="direcciondoc" [(ngModel)]="formulario.direccionDocente">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Lugar</span>
+                    </div>
+                    <input type="text" class="form-control" name="lugardoc" [(ngModel)]="formulario.lugarDocente">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Distrito</span>
+                    </div>
+                    <input type="text" class="form-control" name="distritodoc" [(ngModel)]="formulario.distritoDocente">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Provincia</span>
+                    </div>
+                    <input type="text" class="form-control" name="provinciadoc" [(ngModel)]="formulario.provinciaDocente">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Región</span>
+                    </div>
+                    <input type="text" class="form-control" name="regiondoc" [(ngModel)]="formulario.regionDocente">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono</span>
+                    </div>
+                    <input type="text" class="form-control" name="telefonodoc" [(ngModel)]="formulario.telefonoDocente">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Email</span>
+                    </div>
+                    <input type="text" class="form-control" name="emaildoc" [(ngModel)]="formulario.emailDocente" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">F.Nacimiento</span>
+                    </div>
+                    <input type="text" class="form-control" name="fnacimientodoc" [(ngModel)]="formulario.fechaNacimientoDocente" placeholder="dd/mm/yyyy">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">DNI</span>
+                    </div>
+                    <input type="text" class="form-control" name="dnidoc" [(ngModel)]="formulario.dniDocente">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Especialidad</span>
+                    </div>
+                    <input type="text" class="form-control" name="especialidaddoc" [(ngModel)]="formulario.especialidadDocente">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Código Modular</span>
+                    </div>
+                    <input type="text" class="form-control" name="cmodulardoc" [(ngModel)]="formulario.codigoModularDocente">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Cargo</span>
+                    </div>
+                    <input type="text" class="form-control" name="cargodoc" [(ngModel)]="formulario.cargoDocente">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Curso</span>
+                    </div>
+                    <input type="text" class="form-control" name="cursodoc" [(ngModel)]="formulario.cursoDocente">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Estudios</span>
+                    </div>
+                    <input type="text" class="form-control" name="estudiosdoc" [(ngModel)]="formulario.estudiosDocente">
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Tipo</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01" name="insuni" [(ngModel)]="formulario.institutoUniversidad">
+                    <!-- <option selected>Institución ...</option> -->
+                    <option value="Instituto Pedagogico">Instituto Pedagogico</option>
+                    <option value="Universidad">Universidad</option>
+                </select>
+                </div>
+                <div class="input-group input-group-sm mb-1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Grados</span>
+                    </div>
+                    <input type="text" class="form-control" name="gradosdoc" [(ngModel)]="formulario.gradosDocente">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text" id="inputGroup-sizing-sm">
+                            <input type="checkbox" name="titulado" [(ngModel)]="formulario.titulado">
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" id="inputGroup-sizing-sm" placeholder="Titulado" disabled="disabled">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text" id="inputGroup-sizing-sm">
+                            <input type="checkbox" name="maestria" [(ngModel)]="formulario.maestria">
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" id="inputGroup-sizing-sm" placeholder="Maestria" disabled="disabled">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text" id="inputGroup-sizing-sm">
+                            <input type="checkbox" name="doctorado" [(ngModel)]="formulario.doctorado">
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" id="inputGroup-sizing-sm" placeholder="Doctorado" disabled="disabled">
+                </div>
             </div>
         </div>
-        <div class="col-sm-3 border bg-light">
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Título</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        <div class="form-group row mt-2">
+            <div class="input-group col-md-6">
+                <button [disabled]="!forma.valid" type="submit" class="btn btn-primary btn-block">Guardar</button>
             </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Categoría C</label>
-                </div>
-                <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Area de participación</option>
-                    <option value="1">Ciencias Ambientales</option>
-                    <option value="2">Ciencias Básicas</option>
-                    <option value="3">Tecnología e Ingeniería</option>
-                </select>
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Categoría D</label>
-                </div>
-                <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Area de participación</option>
-                    <option value="1">Ciencias Sociales y Ciudadanía</option>
-                </select>
+            <div class="input-group col-md-6">
+                <button type="submit" class="btn btn-danger btn-block" routerLink="/home">Cancelar</button>
             </div>
         </div>
-        <!-- Datos Estudiante 1 -->
-        <div class="col-sm-3 border bg-light">
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Nombre</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Estudiante 1">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Dirección</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Lugar</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Distrito</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Provincia</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Región</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Email</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">F.Nacimiento</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">DNI</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Grado</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <hr>
-            <!-- Datos Estudiante 2 -->
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Nombre</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Estudiante 2">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Dirección</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Lugar</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Distrito</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Provincia</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Región</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Email</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">F.Nacimiento</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">DNI</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Grado</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-        </div>
-        <!-- Docente Asesor -->
-        <div class="col-sm-3 border bg-light">
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Nombre</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Dirección</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Lugar</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Distrito</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Provincia</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Región</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Teléfono</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Email</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">F.Nacimiento</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">DNI</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Especialidad</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Código Modular</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Cargo</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Curso</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Estudios</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Tipo</label>
-                </div>
-                <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Institución ...</option>
-                    <option value="1">Instituo Pedagógico</option>
-                    <option value="2">Universidad</option>
-                </select>
-            </div>
-            <div class="input-group input-group-sm mb-1">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-sm">Grados</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            </div>
-            <div class="form-check form-check-inline ml-4">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">Titulado</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Maestria</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-                <label class="form-check-label" for="inlineCheckbox3">Doctorado</label>
-            </div>
-        </div>
-    </div>
+    </form>
 </div>

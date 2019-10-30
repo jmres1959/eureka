@@ -1,12 +1,23 @@
-<div class="login-box">
-    <img src="../assets/img/eureka.png" class="avatar" alt="Avatar Image">
-    <h1>Registro de Proyectos Finalistas</h1>
-    <form name="formulario">
-        <!-- USERNAME INPUT -->
-        <label for="username">Código de Acceso</label>
-        <input type="text" placeholder="Ingrese código de acceso" name="codigo" [(ngModel)]="codigo">
-        <!-- PASSWORD INPUT -->
-        <input type="button" value="Registrar" (click)="onLogin()">
-        <input type="button" value="Cancelar" (click)="onClose()">
-    </form>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-7 doc">
+            <div class="sice-box">
+                <a href="https://sice.minedu.gob.pe/">
+                    <img src="assets/img/logo-sice1.png">
+                </a>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="login-box">
+                <img src="assets/img/eureka1.png" class="avatar" alt="Avatar Image">
+                <h1>Registro de Proyectos Finalistas</h1>
+                <form name="formulario">
+                    <label for="username">Código de Acceso</label>
+                    <input type="text" placeholder="Ingrese código de acceso" name="codigo" [(ngModel)]="codigo">
+                    <input type="button" value="Registrar" (click)="onLogin(codigo)">
+                    <input type="button" value="Cancelar" (click)="onClose()">
+                </form>
+            </div>
+        </div>
+    </div>
 </div>

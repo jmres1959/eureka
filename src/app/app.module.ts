@@ -1,12 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 // Rutas
 import { APP_ROUTING } from './app.routes';
 
 // Servicios
 import { DocumentosService } from './services/documentos.service';
+import { FinalistasService } from './services/finalista.service';
+import { DatosService } from './services/datos.service';
 
 // Componentes
 import { AppComponent } from './app.component';
@@ -16,6 +19,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { DatosComponent } from './components/datos/datos.component';
 import { FormatosComponent } from './components/formatos/formatos.component';
+import { FormatoComponent } from './components/formato/formato.component';
 
 @NgModule({
   declarations: [
@@ -25,15 +29,19 @@ import { FormatosComponent } from './components/formatos/formatos.component';
     HeaderComponent,
     HomeComponent,
     DatosComponent,
-    FormatosComponent
+    FormatosComponent,
+    FormatoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     APP_ROUTING
   ],
   providers: [
-    DocumentosService
+    DocumentosService,
+    FinalistasService,
+    DatosService
   ],
   bootstrap: [AppComponent]
 })

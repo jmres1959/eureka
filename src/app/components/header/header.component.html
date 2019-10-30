@@ -1,15 +1,25 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" [routerLink]="['home']">
-        <img src="../assets/img/eureka1.png" width="60" height="40" alt="">
+        <img src="assets/img/eureka1.png" width="100" height="50" alt="">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <a class="nav-item nav-link" routerLinkActive="active" [routerLink]="['home']">Inicio</a>
-            <a class="nav-item nav-link" routerLinkActive="active" [routerLink]="['datos']">Formulario Inscripción</a>
-            <a class="nav-item nav-link" routerLinkActive="active" [routerLink]="['formatos']">Documentos Adjuntos</a>
-        </div>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['home']">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['datos']">Formulario</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['formatos']">Documentos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['login']">Salir</a>
+            </li>
+        </ul>
     </div>
 </nav>

@@ -1,12 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    padding-bottom: 200px;
+    padding-bottom: 50px;
 }
 
-footer {
+
+/* Cambio de Color de NAvBar */
+
+.navbar {
+    background-color: #006892;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.text-green {
+    color: #C1CD23;
+}
+
+.text-blue {
+    color: #006892;
+}
+
+.text-white {
     color: white;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
 }

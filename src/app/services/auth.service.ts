@@ -8,9 +8,10 @@ export class AuthService {
 
   constructor(private router: Router) { }
 
-  setUser(user) {
-    const user_string = JSON.stringify(user);
-    localStorage.setItem('currentUser', user_string);
+  setUser(user: string) {
+    // const user_string = JSON.stringify(user);
+    // localStorage.setItem('currentUser', user_string);
+    localStorage.setItem('currentUser', user);
   }
 
   logOut() {
